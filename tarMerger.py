@@ -1,5 +1,5 @@
 # tarMerger
-# v.: 0.9
+# v.: 1.0
 # Intervision ©
 
 import glob, os, sys
@@ -50,8 +50,13 @@ if yesNo == "Y":
     print ('====================')
     print ('Использована команда')
     print(commandMerge)
-#else if yesNo == "n":
+elif yesNo == "n":
+      print('ERR: #301: Получена команда отмены')
+      sys.exit('Остановка выполнения')
 
-#else if yesNo == "y":
-    
-#else:
+elif yesNo == "y":
+      print('Для подтверждения используйте букву Y (регистр имеет значение!)')
+      sys.exit('Регистр ответа неверен')
+else:
+      print('ERR: #302: Команда не распознана')
+      sys.exit('Команда не распознана')
