@@ -1,3 +1,7 @@
 language: python
 
-script: "pytest"
+install: pip install pyinstaller
+
+script: pyinstaller --onefile --icon=files/archive.ico tarMerger.py
+
+after_script: ls -l
